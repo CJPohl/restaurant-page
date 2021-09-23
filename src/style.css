@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
+:root {
+    --primary-background: #086cdfd0;
+    --primary-text: black;
+    --secondary-text: #dfa208;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: url('./background.jpg');
+    color: var(--primary-text);
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 20px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    border: 2px solid black;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.title:hover {
+    border-color: var(--secondary-text);
+    color: var(--secondary-text); 
+}
+
+.directory {
+    position: absolute;
+    right: 0;
+    margin-right: 150px;
+    display: flex;
+    gap: 150px;
+}
+
+.header a {
+    cursor: pointer;
+}
+
+.header a:hover {
+    color: var(--secondary-text);
+}
+
+.content {
+    position: absolute;
+    top: 75px;
+    bottom: 75px;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.596);
+    border: 1px solid black;
+}
+
+.landing-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 25px 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr .10fr 1fr;
+}
+
+.landing-img-container1 {
+    position: relative;
+    grid-column: 1;
+}
+
+.landing-img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.landing-img-container2 {
+    position: relative;
+    grid-column: 3;
+}
+
+.landing-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.landing-label:hover {
+    border-color: var(--secondary-text);
+    color: var(--secondary-text);
+}
+
+.about-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 25px 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.about-content {
+    text-indent: 50px;
+    line-height: 1.5;
+}
+
+.menu-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    
+}
+
+.menu-item-titles {
+    font-size: 30px;
+}
+
+.menu-item-descriptions {
+    border-bottom: 1px solid black;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.contact-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.contact-title {
+    font-size: 50px;
+}
+
+.contact-number-email {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 75px;
+    width: 100%;
+    background-color: var(--primary-background);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.footer a:hover {
+    color: var(--secondary-text);
+}
+
+.fa-github {
+    color: var(--primary-text);
+    font-size: 40px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: scale(1.2);
+}
+
+.fade-in {
+animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+0% {
+    opacity:0;
+}
+100% {
+    opacity:1;
+}
+}
